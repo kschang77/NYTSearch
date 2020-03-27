@@ -1,6 +1,11 @@
+.card {
+    margin: 10px;
+}
+
 .title {
     text-align: center;
     color: white;
+    margin: 0px;
 }
 
 .jumbotron {
@@ -13,8 +18,8 @@
     /* z-index: 2; */
 }
 
-.form-group {
-    width: 80%;
+.fixed-bottom {
+    text-align: center;
 }
 
 /* .articles {
