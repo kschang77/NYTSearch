@@ -49,12 +49,12 @@ $("#searchButton").on("click", function(event) {
             // all parameters read, populating the corresponding boxes in Top Articles
             var articlesEl = $(".card-body.articles")
             var articleDiv = $("<div>")
-                articleDiv.addClass("articles")
+                articleDiv.addClass("articles article-div")
                 articleDiv.attr('id',"article"+i)
 
             var artheader = $("<header>")
                 artheader.addClass("article-title")
-                artheader.text(stheadline)
+                artheader.html("<span class='article-count'>"+i+"</span> "+stheadline)
 
             var artauthor = $("<h5>")
                 artauthor.addClass("article-author")
