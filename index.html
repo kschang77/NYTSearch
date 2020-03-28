@@ -20,27 +20,29 @@
 <body>
     <div class="jumbotron">
 
-        <!-- Icon -->
-        <!-- <p><span class="far fa-newspaper"><h1 class="title">New York Times</h1></span> </p> -->
-
-        <h1 class="title mb-0"><i class="far fa-newspaper"> New York Times</i></h1>;
+        <h1 class="title mb-0"><i class="far fa-newspaper"> New York Times</i></h1>
         
     </div>
 
     <div class="card">
 
+        <!-- Search header -->
         <div class="card-header">
-            <!-- Icon -->
             <i class="fas fa-poll-h"></i> Search Parameters
         </div>
 
+        <!-- Search parameters -->
         <div class="card-body">
 
             <form id="form-main">
+
+                <!-- Search term -->
                 <div class="form-group">
                     <label for="seachTerm">Search Term</label>
                     <input class="form-control" name="searchTerm" id="searchTerm" placeholder="">
                 </div>
+
+                <!-- Number of records -->
                 <div class="form-group">
                     <label for="numberOfRecords">Number of Records to retrieve</label>
                     <select class="form-control" name="numRecords" id="numberOfRecords">
@@ -51,36 +53,35 @@
                         <option>5</option>
                     </select>
                 </div>
+
+                <!-- Start year -->
                 <div class="form-group">
                     <label for="startYear">Start Year (Optional):</label>
                     <input class="form-control" name="startYear" id="startYear"></input>
                 </div>
+
+                <!-- End year -->
                 <div class="form-group">
                     <label for="endYear">End Year (Optional):</label>
                     <input class="form-control" name="endYear" id="endYear"></input>
                 </div>
 
+                <!-- Buttons -->
                 <button type="submit" class="btn btn-primary" id="searchButton"><i class="fas fa-search"></i> Search</button>
-                <button type="clear" class="btn btn-primary" id="clearButton"><i class="fas fa-trash"></i> Clear Results</button>
+                <button type="reset" class="btn btn-primary" id="clearButton"><i class="fas fa-trash"></i> Clear Results</button>
 
             </form>
         </div>
 
+        <!-- Article header -->
         <div class="card-header">
-            <!-- Icon -->
             <i class="fas fa-table"></i> Top Articles
         </div>
 
-        <div class="card-body articles">
+        <!-- Article cards will be appended here -->
+        <div class="card-body articles"></div>
 
-            <!-- <header class="article-title">Article Name</header>
-            <h5 class="article-author">Article Author</h5>
-            <h5 class="article-section">Section</h5>
-            <h5 class="publication-date">Date</h5>
-            <h6 class="url"><small>https://</small></h6> -->
-       
-        </div>
-
+        <!-- Footer -->
         <nav class="footer fixed-bottom navbar-light bg-light">
             <h6>Made with lots of love <i class="fab fa-gratipay"></i></h6> 
         </nav>
