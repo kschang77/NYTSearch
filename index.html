@@ -36,14 +36,14 @@
 
         <div class="card-body">
 
-            <form>
+            <form id="form-main">
                 <div class="form-group">
                     <label for="seachTerm">Search Term</label>
-                    <input class="form-control" id="searchTerm" placeholder="">
+                    <input class="form-control" name="searchTerm" id="searchTerm" placeholder="">
                 </div>
                 <div class="form-group">
                     <label for="numberOfRecords">Number of Records to retrieve</label>
-                    <select class="form-control" id="numberOfRecords">
+                    <select class="form-control" name="numRecords" id="numberOfRecords">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -53,14 +53,14 @@
                 </div>
                 <div class="form-group">
                     <label for="startYear">Start Year (Optional):</label>
-                    <input class="form-control" id="startYear"></input>
+                    <input class="form-control" name="startYear" id="startYear"></input>
                 </div>
                 <div class="form-group">
                     <label for="endYear">End Year (Optional):</label>
-                    <input class="form-control" id="endYear"></input>
+                    <input class="form-control" name="endYear" id="endYear"></input>
                 </div>
 
-                <button type="search" class="btn btn-primary" id="searchButton"><i class="fas fa-search"></i> Search</button>
+                <button type="submit" class="btn btn-primary" id="searchButton"><i class="fas fa-search"></i> Search</button>
                 <button type="clear" class="btn btn-primary" id="clearButton"><i class="fas fa-trash"></i> Clear Results</button>
 
             </form>
@@ -95,6 +95,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script> -->
 
     <script type="text/javascript" src="app.js"></script>
 </body>
