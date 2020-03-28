@@ -1,6 +1,45 @@
+// validate year fields
+// main form ready
+$(document).ready(function() {
+    // init form id="form-main"
+    $("#form-main").validate({
+      debug: true,
+    //   onsubmit: false,
+      // rules
+      rules: {
+        searchTerm: {
+          required: "true",
+          minlength: 3
+        },
+        startYear: {
+            range:[1900,2020]
+        },
+        endYear: {
+            range: [1900,2020]
+        }
+      },
+      messages: {
+        searchTerm: {
+          required: "Plase enter a search term of 3 characters or longer",
+          minlength: "Search term must be at least 3 characters long"
+        },
+        startYear: {
+          range : "Between 1900 and 2020 please, or leave it blank."
+        },
+        endYear: {
+          range: "Between 1900 and 2020 please, or leave it balnk."
+        }
+      },
+    //   submitHandler: function(form) {
+    //     form.submit();
+    //   }
+    });
+});
+
 // attach submit to search method
 
 $("#searchButton").on("click", function(event) {
+    $("#form-main").valid();
     event.preventDefault();
 
     var searchTerm = $("#searchTerm").val();
@@ -26,24 +65,24 @@ $("#searchButton").on("click", function(event) {
 
         console.log(res)
 
-        for (var i=0; i<=4; i++) {
+        for (var i=0; i<searchNum; i++) {
             var curres = res [i] 
-            console.log(curres)
+            // console.log(curres)
             stweb_url = curres.web_url; //done
-            console.log(stweb_url);
+            // console.log(stweb_url);
 
             // section_name
             stsection_name = curres.section_name; //done
-            console.log(stsection_name);
+            // console.log(stsection_name);
             // byline.original
             stbyline = curres.byline.original; //done
-            console.log(stbyline);
+            // console.log(stbyline);
             // pub_date
             stpub_date = curres.pub_date; //done
-            console.log(stpub_date);
+            // console.log(stpub_date);
             // headline.main
             stheadline = curres.headline.main; //done
-            console.log(stheadline);
+            // console.log(stheadline);
 
 
             // all parameters read, populating the corresponding boxes in Top Articles
@@ -54,7 +93,7 @@ $("#searchButton").on("click", function(event) {
 
             var artheader = $("<header>")
                 artheader.addClass("article-title")
-                artheader.html("<span class='article-count'>"+i+"</span> "+stheadline)
+                artheader.html("<span class='article-count'>"+(i+1)+"</span> "+stheadline)
 
             var artauthor = $("<h5>")
                 artauthor.addClass("article-author")
