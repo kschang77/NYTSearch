@@ -1,0 +1,27 @@
+.card {
+    margin: 10px;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    margin: 0px;
+}
+
+.jumbotron {
+    background-color: navy;
+    
+}
+
+.fa-newspaper {
+    color: white;
+    /* z-index: 2; */
+}
+
+.fixed-bottom {
+    text-align: center;
+}
+
+/* .articles {
+    display: none;
+} */

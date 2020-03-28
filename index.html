@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>NY Times Search!</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+
+        <!-- Icon -->
+        <!-- <p><span class="far fa-newspaper"><h1 class="title">New York Times</h1></span> </p> -->
+
+        <h1 class="title mb-0"><i class="far fa-newspaper"> New York Times</i></h1>;
+        
+    </div>
+
+    <div class="card">
+
+        <div class="card-header">
+            <!-- Icon -->
+            <i class="fas fa-poll-h"></i> Search Parameters
+        </div>
+
+        <div class="card-body">
+
+            <form>
+                <div class="form-group">
+                    <label for="seachTerm">Search Term</label>
+                    <input class="form-control" id="searchTerm" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="numberOfRecords">Number of Records to retrieve</label>
+                    <select class="form-control" id="numberOfRecords">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="startYear">Start Year (Optional):</label>
+                    <input class="form-control" id="startYear"></input>
+                </div>
+                <div class="form-group">
+                    <label for="endYear">End Year (Optional):</label>
+                    <input class="form-control" id="endYear"></input>
+                </div>
+
+                <button type="search" class="btn btn-primary" id="searchButton"><i class="fas fa-search"></i> Search</button>
+                <button type="clear" class="btn btn-primary" id="clearButton"><i class="fas fa-trash"></i> Clear Results</button>
+
+            </form>
+        </div>
+
+        <div class="card-header">
+            <!-- Icon -->
+            <i class="fas fa-table"></i> Top Articles
+        </div>
+
+        <div class="card-body articles">
+
+            <!-- <header class="article-title">Article Name</header>
+            <h5 class="article-author">Article Author</h5>
+            <h5 class="article-section">Section</h5>
+            <h5 class="publication-date">Date</h5>
+            <h6 class="url"><small>https://</small></h6> -->
+       
+        </div>
+
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+            <h6>Made with lots of love <i class="fab fa-gratipay"></i></h6> 
+        </nav>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
