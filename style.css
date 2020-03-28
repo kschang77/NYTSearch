@@ -10,10 +10,6 @@
 
 .jumbotron {
     background-color:hsla(238, 75%, 48%, 0.947);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 0;
-    border-top-left-radius: 0;
 }
 
 .fa-newspaper {
