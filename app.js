@@ -64,26 +64,26 @@ $("#searchButton").on("click", function (event) {
 
         var searchTerm = $("#searchTerm").val();
         // encode to fix spaces and such
-        searchTerm = encodeURI(searchTerm)
+        searchTerm = encodeURI(searchTerm);
 
         var searchNum = $("#numberOfRecords").val();
 
-        var searchStart = $("#startYear").val()
+        var searchStart = $("#startYear").val();
 
-        var searchEnd = $("#endYear").val()
+        var searchEnd = $("#endYear").val();
 
-        var apikey = "pnIQwqEqcO2ShlGiRlYxzyQHj1s9kj5b"
-        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?sort=relevance&api-key=" + apikey + "&page=1&q=" + searchTerm
+        var apikey = "pnIQwqEqcO2ShlGiRlYxzyQHj1s9kj5b";
+        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?sort=relevance&api-key=" + apikey + "&page=1&q=" + searchTerm;
 
         if (searchStart != "") {
-            queryURL = queryURL + "&begin_date=" + searchStart + "0101"
+            queryURL = queryURL + "&begin_date=" + searchStart + "0101";
         }
 
         if (searchEnd != "") {
-            queryURL = queryURL + "&end_date=" + searchEnd + "1231"
+            queryURL = queryURL + "&end_date=" + searchEnd + "1231";
         }
 
-        console.log(queryURL)
+        console.log(queryURL);
 
         // make JS ajax call
         $.ajax({
@@ -93,12 +93,12 @@ $("#searchButton").on("click", function (event) {
 
             // console.log(response)
 
-            var res = response.response.docs
+            var res = response.response.docs;
 
-            console.log(res)
+            console.log(res);
 
             for (var i = 0; i < searchNum; i++) {
-                var curres = res[i]
+                var curres = res[i];
                 // console.log(curres)
                 stweb_url = curres.web_url; //done
                 // console.log(stweb_url);
@@ -118,35 +118,35 @@ $("#searchButton").on("click", function (event) {
 
 
                 // all parameters read, populating the corresponding boxes in Top Articles
-                var articlesEl = $(".card-body.articles")
-                var articleDiv = $("<div>")
-                articleDiv.addClass("articles article-div")
-                articleDiv.attr('id', "article" + i)
+                var articlesEl = $(".card-body.articles");
+                var articleDiv = $("<div>");
+                articleDiv.addClass("articles article-div");
+                articleDiv.attr('id', "article" + i);
 
-                var artheader = $("<header>")
-                artheader.addClass("article-title")
-                artheader.html("<span class='article-count'>" + (i + 1) + "</span> " + stheadline)
+                var artheader = $("<header>");
+                artheader.addClass("article-title");
+                artheader.html("<span class='article-count'>" + (i + 1) + "</span> " + stheadline);
 
-                var artauthor = $("<h5>")
-                artauthor.addClass("article-author")
-                artauthor.text(stbyline)
+                var artauthor = $("<h5>");
+                artauthor.addClass("article-author");
+                artauthor.text(stbyline);
 
                 var artsection = $("<h5>");
                 artsection.addClass("article-section");
-                artsection.text(stsection_name);
+                artsection.text("Section: " + stsection_name);
 
                 var artpubdate = $("<h5>");
                 artpubdate.addClass("publication-date");
                 artpubdate.text(stpub_date);
 
-                var arturl = $("<h6>");
-                arturl.addClass("url");
+                var arturl = $("<a>");
+                arturl.attr("href", stweb_url);
                 arturl.html("<small>" + stweb_url + "</small>");
 
-                articleDiv.append(artheader, artauthor, artsection, artpubdate, arturl)
+                articleDiv.append(artheader, artauthor, artsection, artpubdate, arturl);
 
-                articlesEl.append(articleDiv)
+                articlesEl.append(articleDiv);
             }
-        })
+        });
     }
 });
