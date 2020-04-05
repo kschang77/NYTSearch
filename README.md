@@ -1,35 +1,48 @@
 # NYTSearch
 
-Kasey's API Secret = pnIQwqEqcO2ShlGiRlYxzyQHj1s9kj5b
+NYTSearch is an "intro to API integration" web app where users can enter a search term and query the _New York Times_ archive by setting year limits. 
 
-# Phase one
+The app itself was of little interest. However, I was able to incorporate JQueryValidate into the app to handle data field validations and works as a good demo case on how to use JQueryValidation on future projects. 
 
-Input fields:
-- Search Term 
-- Number of Records -> number cards
-- Start Year
-- End Year
+Most visual work was done by Nadine Bundshush and some participation by Rand Hunt. Backend and validation is all Kasey Chang. 
 
-Output fields:
-- Card Number 1-5
-- Article Name
-- Article Author/s
-- Section
-- Publishing date
-- URL
+## Project Repo
 
-# Phase 2
+https://github.com/kschang77/NYTSearch
 
-- Link search button
-- Transfer data between text boxed and the backend
-- Create content in article section
-- Retreive data using AJAX call
-- Display content
+## Deployed Link
 
-# Phase 3
+https://kschang77.github.io/NYTSearch/
 
-- Add to display content in HTML
-- Add styling or other jQuery tricks
+## Screenshot
 
+![screenshot with results](screenshot.png)
 
-* How to handle inputs with missing fields?
+## Demo
+
+![validation demo](validationdemo.gif)
+
+# Built With
+
+- Javascript
+- Bootstrap 4
+- jQuery
+- FontAwesome
+- NYT Search API
+
+# Code Snippet
+
+# Author
+
+- **Kasey Chang**
+
+- [Link to Github](https://kschang77.github.io)
+- [Link to LinkedIn](https://www.linkedin.com/in/kasey-chang)
+
+# License
+
+This project is licensed under the MIT License
+
+# Acknowledgments
+
+Hat tip to Jerome, Kerwin, Mahi, and the UCBEx Coding Bootcamp March 2020 cohort
