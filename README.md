@@ -4,7 +4,7 @@ NYTSearch is an "intro to API integration" web app where users can enter a searc
 
 The app itself was of little interest. However, I was able to incorporate JQueryValidate into the app to handle data field validations and works as a good demo case on how to use JQueryValidation on future projects. 
 
-Most visual work was done by Nadine Bundshush and some participation by Rand Hunt. Backend and validation is all Kasey Chang. 
+Visual work was done by Nadine Bundschuh with some participation by Rand Hunt. Backend and validation by Kasey Chang. 
 
 ## Project Repo
 
@@ -38,6 +38,8 @@ https://kschang77.github.io/NYTSearch/
 
 - [Link to Github](https://kschang77.github.io)
 - [Link to LinkedIn](https://www.linkedin.com/in/kasey-chang)
+
+with assistance from Nadine Bundschuh and Rand Hunt
 
 # License
 
